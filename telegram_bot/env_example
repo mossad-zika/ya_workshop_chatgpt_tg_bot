@@ -1,0 +1,6 @@
+OPENAI_API_KEY="..."
+TELEGRAM_BOT_TOKEN="..."
+GPT_MODEL="gpt-4o"
+DALL_E_MODEL="dall-e-3"
+SYSTEM_PROMPT="You are a bitrix24 salesman helpful assistant."
+IMAGE_PRICE="10"

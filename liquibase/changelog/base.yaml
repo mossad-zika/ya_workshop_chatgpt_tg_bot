@@ -1,0 +1,44 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: mossad
+      changes:
+        - createTable:
+            tableName: allowed_users
+            columns:
+              - column:
+                  name: user_id
+                  type: BIGINT
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+  - changeSet:
+      id: 2
+      author: mossad
+      changes:
+        - createTable:
+            tableName: user_balances
+            columns:
+              - column:
+                  name: user_id
+                  type: BIGINT
+                  constraints:
+                    primaryKey: true
+              - column:
+                  name: balance
+                  type: NUMERIC(10,2)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: images_generated
+                  type: INT
+                  constraints:
+                    nullable: false
+                    defaultValueNumeric: 0
+        - addForeignKeyConstraint:
+            baseTableName: user_balances
+            baseColumnNames: user_id
+            constraintName: fk_user_balances_user_id
+            referencedTableName: allowed_users
+            referencedColumnNames: user_id
+            onDelete: CASCADE
