@@ -81,6 +81,14 @@ You will get a message
 
 3. Put the ID into the form and press "Allow User" button.
 
+### Tear Down
+
+If you want to completely remove the bot from your machine, you can use the following command:
+
+```bash
+docker compose down -v
+```
+
 ## What's next?
 - [Project Motivation](documentation/project-motivation.md)
 - [Infrastructure components](documentation/infrastructure-components.md)
