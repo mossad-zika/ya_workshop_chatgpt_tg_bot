@@ -24,15 +24,12 @@ To use this bot, you need to have an OpenAI API key.
 
 Pre-generated list of API keys was sent via Telegram Group with the Yandex Workshop team.
 
-[!Caution]
-> Each generated text message or image costs real money, so please be careful with your API key.
-> All costs are covered by me. My account has configured limits, but still please consider the fact.
-> Just text is very cheap, images however are not. For now, please don't try to generate more than 10 images per user per day.
-> Regarding the text, I doubt that without some automation scripts you can consume more than a few dollars a month.
-> And of course, please don't share your API key with anyone.
-
-[!TIP]
-
+> [!CAUTION]
+> - Each generated text message or image costs real money, so please be careful with your API key.
+> - All costs are covered by me. My account has configured limits, but still please consider the fact.
+> - Just text is very cheap, images however are not. For now, please don't try to generate more than 10 images per user per day.
+> - Regarding the text, I doubt that without some automation scripts, you can consume more than a few dollars a month.
+> - And of course, please don't share your API key with anyone.
 
 ### Telegram Bot Token
 
@@ -57,7 +54,7 @@ Please edit `telegram_bot/.env` file and put your values for
 - OPENAI_API_KEY 
 - TELEGRAM_BOT_TOKEN
 
-[!TIP]
+> [!TIP]
 >  You don't have to change any other ENVs, but you are welcome to do this as well.
 
 ### Launch the bot
