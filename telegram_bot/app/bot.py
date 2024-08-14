@@ -301,8 +301,8 @@ def main() -> None:
     application = Application.builder().token(telegram_bot_token).build()
 
     application.add_handler(CommandHandler("start", start))
-    application.add_handler(CommandHandler("image", generate_image))
-    application.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, gpt_prompt))
+    application.add_handler(CommandHandler("image", generate_image, filters=~filters.UpdateType.EDITED))
+    application.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND & ~filters.UpdateType.EDITED, gpt_prompt))
 
     # Run the bot until the user presses Ctrl-C
     application.run_polling(allowed_updates=Update.ALL_TYPES)
