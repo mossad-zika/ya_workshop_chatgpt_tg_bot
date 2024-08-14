@@ -5,6 +5,9 @@ volumes:
 
 services:
   telegram-bot:
+    depends_on:
+      liquibase:
+        condition: service_completed_successfully
     build:
       context: ./telegram_bot
     env_file:
