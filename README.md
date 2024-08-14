@@ -48,7 +48,7 @@ cp telegram_bot/env_example telegram_bot/.env
 cp user_manager/env_example user_manager/.env
 ```
 
-### Fill you OpenAI API key and Telegram Bot Token
+### Fill in your OpenAI API key and Telegram Bot Token
 
 Please edit `telegram_bot/.env` file and put your values for 
 - OPENAI_API_KEY 
