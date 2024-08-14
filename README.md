@@ -25,11 +25,11 @@ To use this bot, you need to have an OpenAI API key.
 Pre-generated list of API keys was sent via Telegram Group with the Yandex Workshop team.
 
 > [!CAUTION]
-> - Each generated text message or image costs real money, so please be careful with your API key.
-> - All costs are covered by me. My account has configured limits, but still please consider the fact.
-> - Just text is very cheap, images however are not. For now, please don't try to generate more than 10 images per user per day.
-> - Regarding the text, I doubt that without some automation scripts, you can consume more than a few dollars a month.
-> - And of course, please don't share your API key with anyone.
+> Each generated text message or image costs real money, so please be careful with your API key.
+> All costs are covered by me. My account has configured limits, but still please consider the fact.
+> Just text is very cheap, images however are not. For now, please don't try to generate more than 10 images per user per day.
+> Regarding the text, I doubt that without some automation scripts, you can consume more than a few dollars a month.
+> And of course, please don't share your API key with anyone.
 
 ### Telegram Bot Token
 
@@ -55,10 +55,10 @@ Please edit `telegram_bot/.env` file and put your values for
 - TELEGRAM_BOT_TOKEN
 
 > [!WARNING]
->  OpenAI has limited list of [supported countries and territories](https://platform.openai.com/docs/supported-countries) \
-> Unfortunately, Russian Federation and Belarus are not listed there \
-> So, you need to use built-in support for Proxy in the bot \
-> If your country is not listed, please set `PROXY_MODE="enabled"` in `telegram_bot/.env` file \
+> OpenAI has a limited list of [supported countries and territories](https://platform.openai.com/docs/supported-countries) \
+> Unfortunately, for example, the Russian Federation and the Republic of Belarus are not listed there \
+> So, if your country is not listed, you need to use built-in support for Proxy in the bot \
+> Please set `PROXY_MODE="enabled"` in `telegram_bot/.env` file \
 > And also set `PROXY_PASS` in `telegram_bot/.env` file, the password provided to the Yandex Workshop team
 
 > [!TIP]
