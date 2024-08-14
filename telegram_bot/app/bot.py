@@ -16,6 +16,7 @@ from logfmter import Logfmter
 import asyncpg
 import telegramify_markdown
 from telegramify_markdown import customize
+import httpx
 
 # Configure telegramify_markdown
 customize.markdown_symbol.head_level_1 = "📌"
@@ -43,8 +44,24 @@ logging.getLogger("httpx").setLevel(logging.WARNING)
 
 logger = logging.getLogger(__name__)
 
-# Set your OpenAI API key
-client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+if os.getenv("PROXY_MODE", "disabled") == "enabled":
+    logger.info("Proxy is enabled.")
+    proxy_host = os.getenv("PROXY_HOST")
+    proxy_user = os.getenv("PROXY_USER")
+    proxy_pass = os.getenv("PROXY_PASS")
+    proxy_port = os.getenv("PROXY_PORT")
+    client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"),
+                    http_client=httpx.Client(
+                        proxies={
+                            "http:": f"http://{proxy_user}:{proxy_pass}@{proxy_host}:{proxy_port}",
+                            "https:": f"http://{proxy_user}:{proxy_pass}@{proxy_host}:{proxy_port}"
+                            }
+                        )
+                    )
+else:
+    logger.info("Proxy is disabled.")
+    client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+
 
 # Global variables
 GPT_MODEL = os.getenv("GPT_MODEL", "gpt-3.5-turbo")

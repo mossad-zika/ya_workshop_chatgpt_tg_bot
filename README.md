@@ -54,6 +54,13 @@ Please edit `telegram_bot/.env` file and put your values for
 - OPENAI_API_KEY 
 - TELEGRAM_BOT_TOKEN
 
+> [!WARNING]
+>  OpenAI has limited list of [supported countries and territories](https://platform.openai.com/docs/supported-countries) \
+> Unfortunately, Russian Federation and Belarus are not listed there \
+> So, you need to use built-in support for Proxy in the bot \
+> If your country is not listed, please set `PROXY_MODE="enabled"` in `telegram_bot/.env` file \
+> And also set `PROXY_PASS` in `telegram_bot/.env` file, the password provided to the Yandex Workshop team
+
 > [!TIP]
 >  You don't have to change any other ENVs, but you are welcome to do this as well.
 
