@@ -1,7 +1,3 @@
-поддержать проксю ...
-дописать доку ...
-
-
 # ChatGPT Telegram Bot
 
 ## Live Demo
@@ -14,9 +10,9 @@ Comrade Danilevich ChatGPT is available in Telegram as [@comrade_danilevich_gpt_
 
 Please make sure you have Docker and Docker Compose installed on your machine.
 
-Consider [Docker Desktop](https://www.docker.com/products/docker-desktop/) for Windows, macOS or Ubuntu.
+Consider [Docker Desktop](https://www.docker.com/products/docker-desktop/) for Windows, macOS, or Ubuntu.
 
-This software is free and contains all the necessary tools built-in.
+This software is free and contains all the necessary tools built in.
 
 Required versions:
 - Docker 27.0.0 or later
@@ -24,13 +20,13 @@ Required versions:
 
 ### OpenAI (ChatGPT) API Key
 
-In order to use this bot, you need to have an OpenAI API key. 
+To use this bot, you need to have an OpenAI API key. 
 
-Pre-generated list of API keys was sent via Telegram Group with Yandex Workshop team.
+Pre-generated list of API keys was sent via Telegram Group with the Yandex Workshop team.
 
 [!Caution]
 > Each generated text message or image costs real money, so please be careful with your API key.
-> All costs are cover by me. My account has configured limits, but still please take the fact into consideration.
+> All costs are covered by me. My account has configured limits, but still please consider the fact.
 > Just text is very cheap, images however are not. For now, please don't try to generate more than 10 images per user per day.
 > Regarding the text, I doubt that without some automation scripts you can consume more than a few dollars a month.
 > And of course, please don't share your API key with anyone.
@@ -97,7 +93,7 @@ You will get a message
 
 2. Navigate to User Manager App as [http://localhost:5005/](http://localhost:5005/)
 
-3. Put the ID into the form and press "Allow User" button.
+3. Put the ID into the form and press the "Allow User" button.
 
 ### If everything went according to plan
 
