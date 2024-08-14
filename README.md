@@ -78,7 +78,7 @@ You will get a message
 > ```
 
 ### Allow Bot to chat with you
-1. Find you Telegram ID using the following command:
+1. Find your Telegram ID using the following command:
     ```bash
     docker compose logs telegram-bot
     ```
