@@ -95,15 +95,15 @@ def allow_user():
         cur.execute("SELECT user_id FROM allowed_users WHERE user_id = %s", (user_id,))
         existing_user = cur.fetchone()
         if existing_user:
-            flash("User %s is already allowed.", 'info')
+            flash(f"User {user_id} is already allowed.", 'info')
             logger.info("User %s is already allowed.", user_id)
         else:
             cur.execute("INSERT INTO allowed_users (user_id) VALUES (%s)", (user_id,))
             conn.commit()
-            flash("User %s has been allowed.", 'success')
+            flash(f"User {user_id} has been allowed.", 'success')
             logger.info("User %s has been successfully allowed.", user_id)
     except Exception as e:
-        logger.error("Error allowing user %s: %s", user_id, e)
+        logger.error(f"Error allowing user {user_id}: {e}")
         flash("Error allowing user %s.", 'error')
     finally:
         logger.info("Closing database connection.")
@@ -125,16 +125,16 @@ def disable_user():
         cur.execute("SELECT user_id FROM allowed_users WHERE user_id = %s", (user_id,))
         existing_user = cur.fetchone()
         if not existing_user:
-            flash("User %s is not currently allowed.", 'info')
+            flash(f"User {user_id} is not currently allowed.", 'info')
             logger.info("User %s is not currently allowed.", user_id)
         else:
             cur.execute("DELETE FROM allowed_users WHERE user_id = %s", (user_id,))
             conn.commit()
-            flash("User %s access revoked.", 'warning')
+            flash(f"User {user_id} access revoked.", 'warning')
             logger.info("User %s access revoked.", user_id)
     except Exception as e:
         logger.error("Error disabling user %s: %s", user_id, e)
-        flash("Error disabling user %s.", 'error')
+        flash(f"Error disabling user {user_id}.", 'error')
     finally:
         logger.info("Closing database connection.")
         cur.close()
@@ -156,7 +156,7 @@ def set_balance():
         cur.execute("SELECT user_id FROM allowed_users WHERE user_id = %s", (user_id,))
         existing_user = cur.fetchone()
         if not existing_user:
-            flash("User %s is not currently allowed.", 'info')
+            flash(f"User {user_id} is not currently allowed.", 'info')
             logger.info("User %s is not currently allowed when setting balance.", user_id)
         else:
             cur.execute(
@@ -169,11 +169,11 @@ def set_balance():
                 (user_id, balance)
             )
             conn.commit()
-            flash("User %s balance has been set to %s.", 'success')
+            flash(f"User {user_id} balance has been set to %s.", 'success')
             logger.info("User %s balance set to %s.", user_id, balance)
     except Exception as e:
         logger.error("Error setting balance for user %s: %s", user_id, e)
-        flash("Error setting balance for user %s.", 'error')
+        flash(f"Error setting balance for user {user_id}.", 'error')
     finally:
         logger.info("Closing database connection.")
         cur.close()
