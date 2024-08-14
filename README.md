@@ -28,7 +28,7 @@ Pre-generated list of API keys was sent via Telegram Group with the Yandex Works
 > Each generated text message or image costs real money, so please be careful with your API key.\
 > All costs are covered by me. My account has configured limits, but still please consider the fact.\
 > Just text is very cheap, images however are not. For now, please don't try to generate more than 10 images per user per day.\
-> Regarding the text, I doubt that without some automation scripts, you can consume more than a few dollars a month.
+> Regarding the text, I doubt that without some automation scripts, you can consume more than a few dollars a month.\
 > And of course, please don't share your API key with anyone.
 
 ### Telegram Bot Token
