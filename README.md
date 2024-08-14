@@ -1,3 +1,7 @@
+поддержать проксю ...
+дописать доку ...
+
+
 # ChatGPT Telegram Bot
 
 ## Live Demo
@@ -23,6 +27,16 @@ Required versions:
 In order to use this bot, you need to have an OpenAI API key. 
 
 Pre-generated list of API keys was sent via Telegram Group with Yandex Workshop team.
+
+[!Caution]
+> Each generated text message or image costs real money, so please be careful with your API key.
+> All costs are cover by me. My account has configured limits, but still please take the fact into consideration.
+> Just text is very cheap, images however are not. For now, please don't try to generate more than 10 images per user per day.
+> Regarding the text, I doubt that without some automation scripts you can consume more than a few dollars a month.
+> And of course, please don't share your API key with anyone.
+
+[!TIP]
+
 
 ### Telegram Bot Token
 
