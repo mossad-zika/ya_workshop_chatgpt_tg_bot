@@ -103,8 +103,8 @@ def allow_user():
             flash(f"User {user_id} has been allowed.", 'success')
             logger.info("User %s has been successfully allowed.", user_id)
     except Exception as e:
-        logger.error(f"Error allowing user {user_id}: {e}")
-        flash("Error allowing user %s.", 'error')
+        logger.error("Error allowing user %s: %s", user_id, e)
+        flash(f"Error allowing user {user_id}.", 'error')
     finally:
         logger.info("Closing database connection.")
         cur.close()
